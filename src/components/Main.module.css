@@ -1,0 +1,19 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4.687rem;
+    text-transform: capitalize;
+}
+
+.see-more {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #BE123C;
+    line-height: 2.4rem;
+}
