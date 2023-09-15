@@ -1,0 +1,58 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border: solid 0.1rem #f1f3f5;
+    border-radius: 0.6rem;
+    /* width: 25rem; */
+    overflow: hidden;
+}
+
+.movie-poster:link,
+.movie-poster:visited {
+    text-decoration: none;
+}
+
+.movie-poster img {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.release-year {
+    font-size: 1.2rem;
+    line-height: 1.562rem;
+    font-weight: 700;
+    color: #9ca3af;
+    display: block;
+}
+
+.movie-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.344rem;
+    color: #111827;
+    text-transform: capitalize;
+}
+
+.movie-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-imdb, .movie-rotten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+    color: #111827;
+}
+
+.movie-genre {
+    color: #9ca3af;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.562rem;
+}
