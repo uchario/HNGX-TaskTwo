@@ -8,14 +8,14 @@ import imdbImg from '../assets/imdb.png';
 import rottenImg from '../assets/rottentomatoes.png';
 import playImg from '../assets/play.png';
 
-import { atom, useAtom } from 'jotai';
-const searchAtom = atom(null);
+// import { atom, useAtom } from 'jotai';
+// const searchAtom = atom(null);
 
 const Header = () => {
-    const[value, setValue] = useAtom(searchAtom);
-    const inputChangeHandler = (e) => {
-        setValue(e.target.value);
-    }
+    // const[value, setValue] = useAtom(searchAtom);
+    // const inputChangeHandler = (e) => {
+    //     setValue(e.target.value);
+    // }
 
     return(
             <header className={styles.header}>
@@ -28,7 +28,7 @@ const Header = () => {
                         <input 
                             type='search' 
                             placeholder='What do you want to watch?'
-                            onChange={inputChangeHandler}
+                            // onChange={inputChangeHandler}
                         />
                     </div>
                     <div className={styles.signin}>

@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Main.module.css';
-import { useAtom } from 'jotai';
+// import { useAtom } from 'jotai';
 
 const Main = () => {
     const {error, data} = useQuery(moviesQuery());
