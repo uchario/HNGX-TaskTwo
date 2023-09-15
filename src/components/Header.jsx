@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import styles from './Header.module.css';
 
 import tvImg from '../assets/tv.png';
@@ -6,16 +8,28 @@ import imdbImg from '../assets/imdb.png';
 import rottenImg from '../assets/rottentomatoes.png';
 import playImg from '../assets/play.png';
 
+import { atom, useAtom } from 'jotai';
+const searchAtom = atom(null);
+
 const Header = () => {
+    const[value, setValue] = useAtom(searchAtom);
+    const inputChangeHandler = (e) => {
+        setValue(e.target.value);
+    }
+
     return(
             <header className={styles.header}>
                 <nav className={styles.nav}>
-                    <div className={styles.home}>
+                    <Link to={`/`} className={styles.home}>
                         <img src={tvImg}/>
                         <p>MovieBox</p>
-                    </div>
+                    </Link>
                     <div className={styles.search}>
-                        <input type='search' placeholder='What do you want to watch?'/>
+                        <input 
+                            type='search' 
+                            placeholder='What do you want to watch?'
+                            onChange={inputChangeHandler}
+                        />
                     </div>
                     <div className={styles.signin}>
                         <p>Sign in</p>
@@ -41,7 +55,7 @@ const Header = () => {
                         target of hit men and women everywhere.
                     </p>
                     <button className={`${styles['btn-play']} ${styles['hero-item']}`}>
-                        <img src={styles.playImg}/>
+                        <img src={playImg}/>
                         <span>watch trailer</span>
                     </button>
                 </div>
