@@ -16,6 +16,10 @@ import movieAdImg from '../assets/movieadvert.png';
 const MovieContent = ({movie}) => {
     const utcDate = new Date(movie?.release_date).toUTCString().slice(0, 17);
 
+    const favoriteHandler = (e) => {
+        e.target.style.color = '#f03e3e';
+    }
+
     return(
         <section className={styles['movie-section']}>
             <div className={styles['movie-section__top']}>
@@ -43,7 +47,7 @@ const MovieContent = ({movie}) => {
                 <div className={styles.rating}>
                     <img/>
                     <p className={styles['rating-section']}>
-                        <FontAwesomeIcon icon={faStar} style={{color: "#edb007",}} />
+                        <FontAwesomeIcon icon={faStar} style={{color: "#edb007", cursor: 'pointer'}} onClick={favoriteHandler}/>
                         <span className={styles['rating-star']}>8.5</span> 
                         &#124; 
                         <span className={styles['rating-num']}>350k</span>
